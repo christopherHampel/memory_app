@@ -78,7 +78,14 @@ h1 {
   font-family: "Red Rose";
   font-size: 140px;
   font-weight: 700;
-  color: variables.$primary-white;
+  color: variables.$primary-white
+}
+
+h2 {
+  font-family: "Red Rose";
+  font-size: 54px;
+  font-weight: 700;
+  color: variables.$primary-dark;
 }
 
 h3 {

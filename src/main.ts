@@ -1,4 +1,14 @@
-import './scss/main.scss';
+import "./scss/main.scss";
+
+import { navigationService } from "./services/navigation-service";
+
+const button = document.getElementById("btn");
+
+button?.addEventListener("click", () => {
+  console.log("Triggert");
+
+  navigationService.navigateTo("/src/html/settings.html");
+});
 
 // init()
 
