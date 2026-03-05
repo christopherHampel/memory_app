@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.primary_btn {
+  @include mixins.flex-center();
+  gap: 20px;
+  background-color: variables.$secondary-yellow;
+  padding: 24px;
+  cursor: pointer;
+  transition: transform 200ms ease-out;
+
+  &__controller {
+    transition: transform 200ms ease-out;
+  }
+
+  &:hover &__controller {
+    transform: rotate(-25.77deg);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__text {
+    font-family: "Red Rose";
+    font-size: 40px;
+    font-weight: 700;
+    color: variables.$primary-dark;
+  }
+}
