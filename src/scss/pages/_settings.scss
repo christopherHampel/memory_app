@@ -1,0 +1,66 @@
+@use "../base/typography";
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+@use "../base/reset";
+@use "../components/buttons";
+
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.header {
+  position: absolute;
+
+  &__headline-underline {
+    width: 100%;
+    border-bottom: 4px solid variables.$secondary-yellow;
+  }
+}
+
+.content {
+  @include mixins.flex-center();
+  flex-direction: column;
+
+  &__game-settings {
+    @include mixins.flex-center();
+    flex-direction: column;
+
+    &--game-themes {
+      @include mixins.flex-center(16px);
+      flex-direction: column;
+    }
+
+    &--headline {
+      @include mixins.flex-center(8px);
+    }
+
+    &--radio {
+      @include mixins.flex-center(12px);
+      flex-direction: column;
+      p {
+        @include mixins.font-almarai(20px, 700);
+        color: variables.$primary-dark;
+        // padding-left: 44px;
+      }
+    }
+  }
+}
+
+.content-preview {
+  &__theme-options {
+    position: relative;
+    @include mixins.flex-center(16px);
+    padding: 14px 20px;
+
+    &--dividing-line {
+      border: 4px solid variables.$secondary-yellow;
+      position: absolute;
+      top: 14px;
+      bottom: 14px;
+      transform: rotate(20deg);
+    }
+  }
+}

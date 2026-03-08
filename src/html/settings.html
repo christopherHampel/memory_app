@@ -1,18 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
-</head>
-<body>
+
+    <script type="module" src="../ts/settings.ts"></script>
+  </head>
+  <body>
     <main>
-        <section>
-            <header>
-                <h2>Settings</h2>
-                <span></span>
-            </header>
+      <header class="header">
+        <div>
+          <h2>Settings</h2>
+          <div class="header__headline-underline"></div>
+        </div>
+      </header>
+
+      <section>
+        <section class="content">
+          <div class="content__game-settings">
+            <div class="content__game-settings--game-themes">
+              <div class="content__game-settings--headline">
+                <img src="/img/palette.png" alt="Palette" />
+                <h6>Game themes</h6>
+              </div>
+              <form class="content__game-settings--radio">
+                <p><input type="radio" name="wahl" value="1" /> Option A</p>
+                <p><input type="radio" name="wahl" value="2" /> Option B</p>
+                <p><input type="radio" name="wahl" value="3" /> Option C</p>
+                <p><input type="radio" name="wahl" value="4" /> Option D</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="content__game-settings">
+            <div class="content__game-settings--game-themes">
+              <div class="content__game-settings--headline">
+                <img src="/img/chess_pawn.png" alt="chess_pawn" />
+                <h6>Game themes</h6>
+              </div>
+              <form class="content__game-settings--radio">
+                <p><input type="radio" name="wahl" value="1" /> Option A</p>
+                <p><input type="radio" name="wahl" value="2" /> Option B</p>
+                <p><input type="radio" name="wahl" value="3" /> Option C</p>
+                <p><input type="radio" name="wahl" value="4" /> Option D</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="content__game-settings">
+            <div class="content__game-settings--game-themes">
+              <div class="content__game-settings--headline">
+                <img src="/img/bounding_box.png" alt="Bounding_box" />
+                <h6>Game themes</h6>
+              </div>
+              <form class="content__game-settings--radio">
+                <p><input type="radio" name="wahl" value="1" /> Option A</p>
+                <p><input type="radio" name="wahl" value="2" /> Option B</p>
+                <p><input type="radio" name="wahl" value="3" /> Option C</p>
+                <p><input type="radio" name="wahl" value="4" /> Option D</p>
+              </form>
+            </div>
+          </div>
         </section>
+
+        <div class="content-preview">
+          <aside class="content-preview__theme-visual">
+            <img src="/img/Theme Visual.png" alt="" />
+          </aside>
+
+          <aside class="content-preview__theme-options">
+            <span>Game theme</span>
+            <div>
+              <span
+                class="content-preview__theme-options--dividing-line"
+              ></span>
+            </div>
+            <span>Plaer</span>
+            <div>
+              <span
+                class="content-preview__theme-options--dividing-line"
+              ></span>
+            </div>
+            <span>Board size</span>
+            <button class="primary_btn">Start</button>
+          </aside>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>

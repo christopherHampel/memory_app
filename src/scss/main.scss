@@ -1,10 +1,6 @@
 @use './base/reset';
 @use './pages/start';
+@use './pages/settings';
 @use './layout/layout';
 @use './components/buttons';
 @use './base/typography';
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
