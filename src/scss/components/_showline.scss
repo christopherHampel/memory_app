@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as variables;
+
+.showline {
+  width: 100%;
+  border-bottom: 4px solid variables.$secondary-yellow;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    bottom: -10px;
+    transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
+    background-color: variables.$secondary-yellow;
+  }
+
+  &--right {
+    &::before {
+      left: auto;
+      right: -16px;
+    }
+  }
+}

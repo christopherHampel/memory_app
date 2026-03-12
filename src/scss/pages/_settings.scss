@@ -3,6 +3,7 @@
 @use "../abstracts/mixins" as mixins;
 @use "../base/reset";
 @use "../components/buttons";
+@use "../components/showline";
 
 section {
   display: flex;
@@ -13,11 +14,8 @@ section {
 
 .header {
   position: absolute;
-
-  &__headline-underline {
-    width: 100%;
-    border-bottom: 4px solid variables.$secondary-yellow;
-  }
+  top: 40px;
+  left: 40px;
 }
 
 .content {
@@ -40,12 +38,35 @@ section {
     &--radio {
       @include mixins.flex-center(12px);
       flex-direction: column;
-      p {
-        @include mixins.font-almarai(20px, 700);
-        color: variables.$primary-dark;
-        // padding-left: 44px;
-      }
     }
+  }
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  @include mixins.font-almarai(20px, 700);
+  color: variables.$primary-dark;
+
+  input[type="radio"] {
+    cursor: pointer;
+  }
+
+  span {
+    flex: 0 0 auto;
+  }
+
+  .showline {
+    width: 100px;
+    height: 4px;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+  }
+
+  input[type="radio"]:checked ~ .showline {
+    opacity: 1;
   }
 }
 
