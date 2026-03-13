@@ -11,3 +11,9 @@
     font-weight: $weight;
     font-size: $size
 }
+
+@mixin font-redrose($size: 16px, $weight: 400) {
+    font-family: 'Red Rose';
+    font-weight: $weight;
+    font-size: $size
+}

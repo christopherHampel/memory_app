@@ -8,7 +8,130 @@
     <script type="module" src="../ts/settings.ts"></script>
   </head>
   <body>
-    <main>
+    <main class="settings">
+
+      <!-- <header class="settings__header">
+        <h2 class="settings__headline">Settings</h2>
+        <div class="showline"></div>
+      </header> -->
+
+      <div class="settings__container">
+        <section class="settings__controls">
+          <fieldset class="settings__fieldset">
+            <legend class="settings__legend">
+              <img src="/img/palette.png" alt="Palette Icon" class="settings__legend-icon" />
+              <span>Game themes</span>
+            </legend>
+            <div class="settings__options">
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="gameTheme" value="code-vibes" />
+                  <span>Code vibes theme</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="gameTheme" value="gaming" />
+                  <span>Gaming theme</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="gameTheme" value="da-projects" />
+                  <span>DA Projects theme</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="gameTheme" value="foods" />
+                  <span>Foods theme</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="settings__fieldset">
+            <legend class="settings__legend">
+              <img src="/img/chess_pawn.png" alt="Chess Pawn Icon" class="settings__legend-icon" />
+              <span>Choose Player</span>
+            </legend>
+            <div class="settings__options">
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="playerColor" value="blue" />
+                  <span>Blue</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="playerColor" value="orange" />
+                  <span>Orange</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="settings__fieldset">
+            <legend class="settings__legend">
+              <img src="/img/smart_display.png" alt="Smart Display Icon" class="settings__legend-icon" />
+              <span>Board size</span>
+            </legend>
+            <div class="settings__options">
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="boardSize" value="16" />
+                  <span>16 cards</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="boardSize" value="24" />
+                  <span>24 cards</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+              <div class="settings__radio-wrapper">
+                <label class="settings__radio-option">
+                  <input type="radio" name="boardSize" value="36" />
+                  <span>36 cards</span>
+                </label>
+                <div class="showline showline--right"></div>
+              </div>
+            </div>
+          </fieldset>
+        </section>        <section class="settings__preview">
+          <figure class="settings__preview-image">
+            <img src="/img/Theme Visual.png" alt="Theme Vorschau" />
+          </figure>
+
+          <div class="settings__preview-info">
+            <div class="settings__preview-item">
+              <span>Game theme</span>
+            </div>
+            <div class="settings__preview-item">
+              <span>Player</span>
+            </div>
+            <div class="settings__preview-item">
+              <span>Board size</span>
+            </div>
+          </div>
+
+          <button class="primary_btn">Start</button>
+        </section>
+      </div>
+    </main>
+
+
+
+
+    <!-- <main>
       <header class="header">
         <div>
           <h2>Settings</h2>
@@ -24,25 +147,28 @@
                 <img src="/img/palette.png" alt="Palette" />
                 <h6>Game themes</h6>
               </div>
-              <form class="content__game-settings--radio">
+              <form
+                class="content__game-settings--radio"
+                data-setting="gameTheme"
+              >
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="1" />
-                  <span>Option A</span>
+                  <input type="radio" name="gameTheme" value="code-vibes" />
+                  <span>Code vibes theme</span>
                   <div class="showline showline--right"></div>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="2" />
-                  <span>Option B</span>
+                  <input type="radio" name="gameTheme" value="gaming" />
+                  <span>Gaming theme</span>
                   <div class="showline showline--right"></div>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="3" />
-                  <span>Option C</span>
+                  <input type="radio" name="gameTheme" value="da-projects" />
+                  <span>DA Projects theme</span>
                   <div class="showline showline--right"></div>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="4" />
-                  <span>Option D</span>
+                  <input type="radio" name="gameTheme" value="foods" />
+                  <span>Foods theme</span>
                   <div class="showline showline--right"></div>
                 </label>
               </form>
@@ -53,27 +179,17 @@
             <div class="content__game-settings--game-themes">
               <div class="content__game-settings--headline">
                 <img src="/img/chess_pawn.png" alt="chess_pawn" />
-                <h6>Game themes</h6>
+                <h6>Choose player</h6>
               </div>
-              <form class="content__game-settings--radio">
+              <form class="content__game-settings--radio" data-setting="player">
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="1" />
-                  <span>Option A</span>
+                  <input type="radio" name="player" value="blue" />
+                  <span>Blue</span>
                   <div class="showline showline--right"></div>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="2" />
-                  <span>Option B</span>
-                  <div class="showline showline--right"></div>
-                </label>
-                <label class="radio-option">
-                  <input type="radio" name="wahl" value="3" />
-                  <span>Option C</span>
-                  <div class="showline showline--right"></div>
-                </label>
-                <label class="radio-option">
-                  <input type="radio" name="wahl" value="4" />
-                  <span>Option D</span>
+                  <input type="radio" name="player" value="orange" />
+                  <span>Orange</span>
                   <div class="showline showline--right"></div>
                 </label>
               </form>
@@ -84,27 +200,25 @@
             <div class="content__game-settings--game-themes">
               <div class="content__game-settings--headline">
                 <img src="/img/bounding_box.png" alt="Bounding_box" />
-                <h6>Game themes</h6>
+                <h6>Board size</h6>
               </div>
-              <form class="content__game-settings--radio">
+              <form
+                class="content__game-settings--radio"
+                data-setting="boardSize"
+              >
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="1" />
-                  <span>Option A</span>
+                  <input type="radio" name="boardSize" value="16" />
+                  <span>16 cards</span>
                   <div class="showline showline--right"></div>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="2" />
-                  <span>Option B</span>
+                  <input type="radio" name="boardSize" value="24" />
+                  <span>24 cards</span>
                   <div class="showline showline--right"></div>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="wahl" value="3" />
-                  <span>Option C</span>
-                  <div class="showline showline--right"></div>
-                </label>
-                <label class="radio-option">
-                  <input type="radio" name="wahl" value="4" />
-                  <span>Option D</span>
+                  <input type="radio" name="boardSize" value="36" />
+                  <span>36 cards</span>
                   <div class="showline showline--right"></div>
                 </label>
               </form>
@@ -122,19 +236,32 @@
             <div>
               <span
                 class="content-preview__theme-options--dividing-line"
-              ></span>
+                id="preview-gameTheme"
+                >-</span
+              >
             </div>
             <span>Player</span>
             <div>
               <span
                 class="content-preview__theme-options--dividing-line"
-              ></span>
+                id="preview-player"
+                >-</span
+              >
             </div>
             <span>Board size</span>
-            <button class="primary_btn"><img src="/img/smart_display.png" alt="Smart_Display">Start</button>
+            <div>
+              <span
+                class="content-preview__theme-options--dividing-line"
+                id="preview-boardSize"
+                >-</span
+              >
+            </div>
+            <button class="primary_btn">
+              <img src="/img/smart_display.png" alt="Smart_Display" />Start
+            </button>
           </aside>
         </div>
       </section>
-    </main>
+    </main> -->
   </body>
 </html>

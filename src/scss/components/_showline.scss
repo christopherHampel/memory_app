@@ -12,14 +12,17 @@
     bottom: -10px;
     transform: rotate(45deg);
     width: 16px;
-    height: 16px;
+    aspect-ratio: 1 / 1;
     background-color: variables.$secondary-yellow;
   }
 
   &--right {
+    width: 41px !important;
     &::before {
+      width: 10px;
       left: auto;
-      right: -16px;
+      right: -10px;
+      bottom: -7px;
     }
   }
 }
