@@ -1,9 +1,5 @@
 @use "../abstracts/variables" as variables;
 
-body {
-  background-color: variables.$primary-dark;
-}
-
 main {
   max-width: variables.$max-screen-width;
   margin: auto;

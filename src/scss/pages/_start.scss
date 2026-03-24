@@ -1,14 +1,19 @@
-@use '../abstracts/mixins' as mixins;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as var;
+
+body {
+  background-color: var.$primary-dark;
+}
 
 section {
-    @include mixins.flex-center();
-    flex-direction: column;
-    gap: 60px;
-    height: 100vh;
+  @include mixins.flex-center();
+  flex-direction: column;
+  gap: 60px;
+  height: 100vh;
 
-    figure {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
+  figure {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
