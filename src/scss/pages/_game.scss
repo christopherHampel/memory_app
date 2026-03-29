@@ -1,22 +1,31 @@
 @use "../abstracts/mixins" as mixins;
 @use "../abstracts/variables" as var;
 @use "../layout/layout";
+@use "../themes/game_theme";
+@use "../themes/code_vibes_theme";
 
 nav {
   @include mixins.flex-center($justify-content: space-between);
+
+  .game-nav {
+    &__player {
+      @include mixins.flex-center();
+      padding: 17px 20px;
+    }
+  }
 }
 
-.game-main {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 12px;
-  width: calc(4 * 40px + 3 * 12px); // 4 Kästchen + 3 Abstände
-  margin: 0 auto;
-}
+// .game-main {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-template-rows: repeat(4, 1fr);
+//   gap: 12px;
+//   width: calc(4 * 40px + 3 * 12px); // 4 Kästchen + 3 Abstände
+//   margin: 0 auto;
+// }
 
-.game-box {
-  width: 40px;
-  height: 40px;
-  background-color: red;
-}
+// .game-box {
+//   width: 40px;
+//   height: 40px;
+//   background-color: red;
+// }

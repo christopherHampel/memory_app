@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as var;
+
+body.theme--code-vibes {
+  // background-color: red;
+
+  .game-nav {
+    &__player {
+      background-color: var.$primary-blue;
+    }
+  }
+}
